@@ -73,7 +73,15 @@ print_pairing_info(melon_types)
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
 
-    # Fill in the rest
+    melon_dict = {}
+
+    for melon in melon_types:
+        melon_dict[melon.code] = [melon.code, melon.first_harvest, melon.color, 
+            melon.is_seedless, melon.is_bestseller, melon.name]
+
+make_melon_type_lookup(melon_types)
+
+
 
 ############
 # Part 2   #
